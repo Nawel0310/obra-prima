@@ -27,14 +27,14 @@ export function StaggerReveal({
       if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
       const items = ref.current ? Array.from(ref.current.children) : [];
       if (!items.length) return;
-      gsap.from(items, {
-        y,
-        opacity: 0,
+      gsap.set(items, { y, opacity: 0 });
+      gsap.to(items, {
+        y: 0,
+        opacity: 1,
         duration: 0.85,
         delay,
         ease: "power3.out",
         stagger,
-        immediateRender: false,
         scrollTrigger: {
           trigger: ref.current,
           start,

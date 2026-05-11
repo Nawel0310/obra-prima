@@ -25,13 +25,13 @@ export function ScrollReveal({
   useGSAP(
     () => {
       if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-      gsap.from(ref.current, {
-        y,
-        opacity: 0,
+      gsap.set(ref.current, { y, opacity: 0 });
+      gsap.to(ref.current, {
+        y: 0,
+        opacity: 1,
         duration,
         delay,
         ease: "power3.out",
-        immediateRender: false,
         scrollTrigger: {
           trigger: ref.current,
           start: "top 88%",

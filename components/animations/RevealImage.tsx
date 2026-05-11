@@ -30,8 +30,10 @@ export function RevealImage({
   useGSAP(
     () => {
       if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-      gsap.from(ref.current, {
-        clipPath: clipStart,
+
+      gsap.set(ref.current, { clipPath: clipStart });
+      gsap.to(ref.current, {
+        clipPath: "inset(0 0 0% 0)",
         duration,
         delay,
         ease: "power4.inOut",
@@ -45,8 +47,9 @@ export function RevealImage({
 
       const img = ref.current?.querySelector("img");
       if (img) {
-        gsap.from(img, {
-          scale: 1.18,
+        gsap.set(img, { scale: 1.18 });
+        gsap.to(img, {
+          scale: 1,
           duration: duration + 0.3,
           delay,
           ease: "power3.out",
@@ -54,6 +57,7 @@ export function RevealImage({
             trigger: ref.current,
             start: "top 82%",
             toggleActions: "play none none none",
+            invalidateOnRefresh: true,
           },
         });
       }
@@ -62,11 +66,7 @@ export function RevealImage({
   );
 
   return (
-    <div
-      ref={ref}
-      className={className}
-      style={{ clipPath: "inset(0 0 0% 0)" }}
-    >
+    <div ref={ref} className={className}>
       {children}
     </div>
   );

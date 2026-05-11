@@ -28,13 +28,13 @@ export function TextSplit({
       if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
       const words = ref.current?.querySelectorAll(".word-inner");
       if (!words?.length) return;
-      gsap.from(words, {
-        y: "110%",
+      gsap.set(words, { y: "110%" });
+      gsap.to(words, {
+        y: "0%",
         duration: 0.85,
         ease: "power4.out",
         stagger,
         delay,
-        immediateRender: false,
         scrollTrigger: {
           trigger: ref.current,
           start: "top 88%",
