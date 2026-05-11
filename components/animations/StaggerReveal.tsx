@@ -34,10 +34,12 @@ export function StaggerReveal({
         delay,
         ease: "power3.out",
         stagger,
+        immediateRender: false,
         scrollTrigger: {
           trigger: ref.current,
           start,
           toggleActions: "play none none none",
+          invalidateOnRefresh: true,
         },
       });
     },

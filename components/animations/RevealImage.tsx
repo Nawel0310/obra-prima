@@ -39,6 +39,7 @@ export function RevealImage({
           trigger: ref.current,
           start: "top 82%",
           toggleActions: "play none none none",
+          invalidateOnRefresh: true,
         },
       });
 

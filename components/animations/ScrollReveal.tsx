@@ -31,10 +31,12 @@ export function ScrollReveal({
         duration,
         delay,
         ease: "power3.out",
+        immediateRender: false,
         scrollTrigger: {
           trigger: ref.current,
           start: "top 88%",
           toggleActions: "play none none none",
+          invalidateOnRefresh: true,
         },
       });
     },

@@ -5,12 +5,17 @@ import { ScrollTrigger } from "@/lib/gsap";
 
 export function AnimationsInit() {
   useEffect(() => {
-    // Images and fonts may not be loaded when GSAP first calculates positions.
-    // Refreshing after a frame ensures correct trigger offsets.
-    const raf = requestAnimationFrame(() => {
-      ScrollTrigger.refresh();
-    });
-    return () => cancelAnimationFrame(raf);
+    const refresh = () => ScrollTrigger.refresh();
+
+    // Must wait for all resources (images, fonts) before refreshing trigger positions.
+    // rAF fires before images load — window.load is the correct event.
+    if (document.readyState === "complete") {
+      const t = setTimeout(refresh, 100);
+      return () => clearTimeout(t);
+    }
+
+    window.addEventListener("load", refresh);
+    return () => window.removeEventListener("load", refresh);
   }, []);
 
   return null;

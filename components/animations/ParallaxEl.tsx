@@ -23,6 +23,7 @@ export function ParallaxEl({ children, className, speed = 0.4 }: Props) {
           start: "top top",
           end: "bottom top",
           scrub: true,
+          invalidateOnRefresh: true,
         },
       });
     },

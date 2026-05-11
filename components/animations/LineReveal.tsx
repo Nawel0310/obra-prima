@@ -25,6 +25,7 @@ export function LineReveal({ className, duration = 1.6, delay = 0.3 }: Props) {
           trigger: ref.current,
           start: "top 80%",
           toggleActions: "play none none none",
+          invalidateOnRefresh: true,
         },
       });
     },

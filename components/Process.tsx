@@ -66,10 +66,9 @@ export default function Process() {
         </div>
 
         <div className="relative">
-          {/* Background line (static, low opacity) */}
-          <div className="hidden lg:block absolute top-[52px] left-[12.5%] right-[12.5%] h-px bg-accent/12" />
-          {/* Animated line */}
-          <LineReveal className="hidden lg:block absolute top-[52px] left-[12.5%] right-[12.5%] h-px bg-accent/45" />
+          {/* Lines sit behind step content — z-0 keeps them under z-10 step items */}
+          <div className="hidden lg:block absolute top-[82px] left-[12.5%] right-[12.5%] h-px bg-accent/12 z-0" />
+          <LineReveal className="hidden lg:block absolute top-[82px] left-[12.5%] right-[12.5%] h-px bg-accent/45 z-0" />
 
           <StaggerReveal
             className="grid grid-cols-1 lg:grid-cols-4 gap-14 lg:gap-8"
@@ -80,28 +79,29 @@ export default function Process() {
             {steps.map(({ number, icon: Icon, title, description }) => (
               <div
                 key={number}
-                className="relative flex flex-col items-center text-center"
+                className="relative z-10 flex flex-col items-center text-center"
               >
-                <div className="relative mb-6 flex flex-col items-center">
-                  <div
-                    className="text-accent/15 absolute -top-9 left-1/2 -translate-x-1/2 leading-none select-none pointer-events-none"
-                    style={{
-                      fontFamily: "var(--font-cormorant), Georgia, serif",
-                      fontSize: "5.5rem",
-                      fontWeight: 700,
-                    }}
+                {/* Number above icon — in normal flow, never hidden behind circle */}
+                <div
+                  className="text-accent/20 leading-none select-none pointer-events-none"
+                  style={{
+                    fontFamily: "var(--font-cormorant), Georgia, serif",
+                    fontSize: "3rem",
+                    fontWeight: 700,
+                  }}
+                  aria-hidden="true"
+                >
+                  {number}
+                </div>
+
+                {/* Icon circle — mt-2 gap after number, mb-6 before title */}
+                <div className="mt-2 mb-6 w-[52px] h-[52px] rounded-full bg-bg border border-accent/50 flex items-center justify-center">
+                  <Icon
+                    size={22}
+                    className="text-accent"
+                    strokeWidth={1.5}
                     aria-hidden="true"
-                  >
-                    {number}
-                  </div>
-                  <div className="relative z-10 w-[52px] h-[52px] rounded-full bg-bg border border-accent/50 flex items-center justify-center">
-                    <Icon
-                      size={22}
-                      className="text-accent"
-                      strokeWidth={1.5}
-                      aria-hidden="true"
-                    />
-                  </div>
+                  />
                 </div>
 
                 <h5 className="text-text-primary mb-3">{title}</h5>

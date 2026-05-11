@@ -34,10 +34,12 @@ export function TextSplit({
         ease: "power4.out",
         stagger,
         delay,
+        immediateRender: false,
         scrollTrigger: {
           trigger: ref.current,
           start: "top 88%",
           toggleActions: "play none none none",
+          invalidateOnRefresh: true,
         },
       });
     },
