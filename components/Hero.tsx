@@ -15,11 +15,21 @@ export default function Hero() {
         className="absolute inset-0 scale-[1.25]"
         speed={0.55}
       >
+        {/* Portrait para mobile (< 768px) */}
+        <Image
+          src="/images/hero_background_mobile.webp"
+          alt="Obra de construcción de alto estándar en Buenos Aires"
+          fill
+          className="object-cover object-center block md:hidden"
+          priority
+          sizes="100vw"
+        />
+        {/* Landscape para desktop (≥ 768px) */}
         <Image
           src="/images/hero_background.webp"
           alt="Obra de construcción de alto estándar en Buenos Aires"
           fill
-          className="object-cover object-center"
+          className="object-cover object-center hidden md:block"
           priority
           sizes="100vw"
         />

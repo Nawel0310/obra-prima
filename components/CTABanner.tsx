@@ -9,11 +9,20 @@ export default function CTABanner() {
   return (
     <section className="relative py-32 lg:py-44 overflow-hidden">
       <ParallaxEl className="absolute inset-0 scale-[1.2]" speed={0.5}>
+        {/* Portrait para mobile (< 768px) */}
+        <Image
+          src="/images/cta_banner_background_mobile.webp"
+          alt="Construcción de alto estándar — OBRA-PRIMA"
+          fill
+          className="object-cover object-center block md:hidden"
+          sizes="100vw"
+        />
+        {/* Landscape para desktop (≥ 768px) */}
         <Image
           src="/images/cta_banner_background.webp"
           alt="Construcción de alto estándar — OBRA-PRIMA"
           fill
-          className="object-cover object-center"
+          className="object-cover object-center hidden md:block"
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-black/72" />
