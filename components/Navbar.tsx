@@ -72,7 +72,7 @@ export default function Navbar() {
               className="font-semibold bg-accent text-black px-5 py-2.5 rounded-full hover:opacity-90 transition-colors duration-200 cursor-pointer"
               style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}
             >
-              Presupuesto gratis
+              Presupuesto GRATIS
             </a>
           </div>
 

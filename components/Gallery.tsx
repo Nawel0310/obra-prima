@@ -29,10 +29,6 @@ const images: GalleryImage[] = [
     alt: "Proyecto arquitectónico de alta gama",
   },
   {
-    src: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80",
-    alt: "Detalle constructivo premium",
-  },
-  {
     src: "https://images.unsplash.com/photo-1523217582562-09d0def993a6?w=600&q=80",
     alt: "Interior de vivienda terminada",
   },
