@@ -1,3 +1,5 @@
+"use client";
+
 import { Phone, Mail, MapPin } from "lucide-react";
 
 const navLinks = [
@@ -14,7 +16,7 @@ const bodyFont = { fontFamily: "var(--font-barlow), system-ui, sans-serif" };
 
 export default function Footer() {
   return (
-    <footer className="bg-surface border-t border-border">
+    <footer style={{ backgroundColor: "var(--color-primary)" }}>
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
           <div className="col-span-2 lg:col-span-1">
@@ -31,15 +33,14 @@ export default function Footer() {
                 OBRA-PRIMA
               </span>
               <span
-                className="text-foreground-muted"
-                style={{ ...bodyFont, fontSize: "1.25rem" }}
+                style={{ ...bodyFont, fontSize: "1.25rem", color: "rgba(255,255,255,0.50)" }}
               >
                 Construimos lo que imaginás.
               </span>
             </div>
             <p
-              className="text-foreground-muted leading-relaxed max-w-[220px]"
-              style={bodyFont}
+              className="leading-relaxed max-w-[220px]"
+              style={{ ...bodyFont, color: "rgba(255,255,255,0.60)" }}
             >
               Constructora argentina especializada en viviendas, reformas,
               ampliaciones y proyectos comerciales de alto estándar.
@@ -48,8 +49,8 @@ export default function Footer() {
 
           <div>
             <h6
-              className="text-foreground text-xl tracking-[0.18em] uppercase mb-5 font-semibold"
-              style={bodyFont}
+              className="text-xl tracking-[0.18em] uppercase mb-5 font-semibold"
+              style={{ ...bodyFont, color: "rgba(255,255,255,0.40)" }}
             >
               Navegación
             </h6>
@@ -58,8 +59,10 @@ export default function Footer() {
                 <li key={href}>
                   <a
                     href={href}
-                    className="text-foreground-muted hover:text-accent transition-colors duration-200 cursor-pointer"
-                    style={bodyFont}
+                    className="hover:text-accent transition-colors duration-200 cursor-pointer"
+                    style={{ ...bodyFont, color: "rgba(255,255,255,0.72)" }}
+                    onMouseEnter={(e) => ((e.target as HTMLElement).style.color = "var(--color-accent)")}
+                    onMouseLeave={(e) => ((e.target as HTMLElement).style.color = "rgba(255,255,255,0.72)")}
                   >
                     {label}
                   </a>
@@ -70,8 +73,8 @@ export default function Footer() {
 
           <div>
             <h6
-              className="text-foreground text-xl tracking-[0.18em] uppercase mb-5 font-semibold"
-              style={bodyFont}
+              className="text-xl tracking-[0.18em] uppercase mb-5 font-semibold"
+              style={{ ...bodyFont, color: "rgba(255,255,255,0.40)" }}
             >
               Servicios
             </h6>
@@ -80,8 +83,10 @@ export default function Footer() {
                 <li key={service}>
                   <a
                     href="#servicios"
-                    className="text-foreground-muted hover:text-accent transition-colors duration-200 cursor-pointer"
-                    style={bodyFont}
+                    className="transition-colors duration-200 cursor-pointer"
+                    style={{ ...bodyFont, color: "rgba(255,255,255,0.72)" }}
+                    onMouseEnter={(e) => ((e.target as HTMLElement).style.color = "var(--color-accent)")}
+                    onMouseLeave={(e) => ((e.target as HTMLElement).style.color = "rgba(255,255,255,0.72)")}
                   >
                     {service}
                   </a>
@@ -92,8 +97,8 @@ export default function Footer() {
 
           <div>
             <h6
-              className="text-foreground text-xl tracking-[0.18em] uppercase mb-5 font-semibold"
-              style={bodyFont}
+              className="text-xl tracking-[0.18em] uppercase mb-5 font-semibold"
+              style={{ ...bodyFont, color: "rgba(255,255,255,0.40)" }}
             >
               Contacto
             </h6>
@@ -107,8 +112,10 @@ export default function Footer() {
                 />
                 <a
                   href="tel:+541100000000"
-                  className="text-foreground-muted hover:text-accent transition-colors duration-200"
-                  style={bodyFont}
+                  className="transition-colors duration-200"
+                  style={{ ...bodyFont, color: "rgba(255,255,255,0.72)" }}
+                  onMouseEnter={(e) => ((e.target as HTMLElement).style.color = "var(--color-accent)")}
+                  onMouseLeave={(e) => ((e.target as HTMLElement).style.color = "rgba(255,255,255,0.72)")}
                 >
                   +54 11 0000-0000
                 </a>
@@ -122,8 +129,10 @@ export default function Footer() {
                 />
                 <a
                   href="mailto:contacto@obra-prima.com.ar"
-                  className="text-foreground-muted hover:text-accent transition-colors duration-200"
-                  style={bodyFont}
+                  className="transition-colors duration-200"
+                  style={{ ...bodyFont, color: "rgba(255,255,255,0.72)" }}
+                  onMouseEnter={(e) => ((e.target as HTMLElement).style.color = "var(--color-accent)")}
+                  onMouseLeave={(e) => ((e.target as HTMLElement).style.color = "rgba(255,255,255,0.72)")}
                 >
                   contacto@obra-prima.com.ar
                 </a>
@@ -135,7 +144,7 @@ export default function Footer() {
                   strokeWidth={1.5}
                   aria-hidden="true"
                 />
-                <span className="text-foreground-muted" style={bodyFont}>
+                <span style={{ ...bodyFont, color: "rgba(255,255,255,0.72)" }}>
                   Av. del Ejemplo 1234, CABA
                 </span>
               </li>
@@ -144,23 +153,27 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-border">
+      <div style={{ borderTop: "1px solid rgba(255,255,255,0.10)" }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-foreground-muted text-xl" style={bodyFont}>
+          <p className="text-xl" style={{ ...bodyFont, color: "rgba(255,255,255,0.40)" }}>
             © 2025 OBRA-PRIMA. Todos los derechos reservados.
           </p>
           <div className="flex gap-6">
             <a
               href="#"
-              className="text-foreground-muted text-xl hover:text-accent transition-colors duration-200 cursor-pointer"
-              style={bodyFont}
+              className="text-xl transition-colors duration-200 cursor-pointer"
+              style={{ ...bodyFont, color: "rgba(255,255,255,0.40)" }}
+              onMouseEnter={(e) => ((e.target as HTMLElement).style.color = "var(--color-accent)")}
+              onMouseLeave={(e) => ((e.target as HTMLElement).style.color = "rgba(255,255,255,0.40)")}
             >
               Política de privacidad
             </a>
             <a
               href="#"
-              className="text-foreground-muted text-xl hover:text-accent transition-colors duration-200 cursor-pointer"
-              style={bodyFont}
+              className="text-xl transition-colors duration-200 cursor-pointer"
+              style={{ ...bodyFont, color: "rgba(255,255,255,0.40)" }}
+              onMouseEnter={(e) => ((e.target as HTMLElement).style.color = "var(--color-accent)")}
+              onMouseLeave={(e) => ((e.target as HTMLElement).style.color = "rgba(255,255,255,0.40)")}
             >
               Términos de uso
             </a>

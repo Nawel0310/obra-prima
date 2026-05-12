@@ -1,3 +1,5 @@
+"use client";
+
 import { Home, Hammer, Maximize2, Building2 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { ScrollReveal } from "@/components/animations/ScrollReveal";
@@ -39,15 +41,13 @@ const services: Service[] = [
 
 export default function Services() {
   return (
-    <section id="servicios" className="bg-surface py-24 lg:py-36">
+    <section id="servicios" className="py-24 lg:py-36" style={{ backgroundColor: "var(--color-primary)" }}>
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
           <ScrollReveal>
             <p
               className="text-accent text-xl tracking-[0.2em] uppercase mb-4"
-              style={{
-                fontFamily: "var(--font-barlow), system-ui, sans-serif",
-              }}
+              style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}
             >
               Lo que hacemos
             </p>
@@ -55,7 +55,7 @@ export default function Services() {
           <TextSplit
             text="Nuestros servicios"
             as="h2"
-            className="text-foreground"
+            className="text-background"
           />
         </div>
 
@@ -67,7 +67,19 @@ export default function Services() {
           {services.map(({ icon: Icon, title, description }) => (
             <article
               key={title}
-              className="group bg-muted border border-border p-8 lg:p-10 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(201,169,110,0.07)]"
+              className="group p-8 lg:p-10 transition-all duration-300 hover:-translate-y-2"
+              style={{
+                backgroundColor: "rgba(255,255,255,0.07)",
+                border: "1px solid rgba(255,255,255,0.12)",
+              }}
+              onMouseEnter={(e) => {
+                (e.currentTarget as HTMLElement).style.backgroundColor = "rgba(35,87,212,0.35)";
+                (e.currentTarget as HTMLElement).style.borderColor = "rgba(14,165,233,0.4)";
+              }}
+              onMouseLeave={(e) => {
+                (e.currentTarget as HTMLElement).style.backgroundColor = "rgba(255,255,255,0.07)";
+                (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.12)";
+              }}
             >
               <div className="mb-6">
                 <Icon
@@ -77,20 +89,19 @@ export default function Services() {
                   aria-hidden="true"
                 />
               </div>
-              <h4 className="text-accent mb-3">{title}</h4>
+              <h4 className="text-background mb-3">{title}</h4>
               <p
-                className="text-foreground-muted leading-relaxed mb-6"
+                className="leading-relaxed mb-6"
                 style={{
                   fontFamily: "var(--font-barlow), system-ui, sans-serif",
+                  color: "rgba(255,255,255,0.72)",
                 }}
               >
                 {description}
               </p>
               <span
                 className="text-accent text-xl tracking-wide inline-block group-hover:translate-x-1.5 transition-transform duration-200"
-                style={{
-                  fontFamily: "var(--font-barlow), system-ui, sans-serif",
-                }}
+                style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}
               >
                 Ver más →
               </span>

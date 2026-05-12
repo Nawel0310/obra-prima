@@ -45,15 +45,19 @@ const steps: Step[] = [
 
 export default function Process() {
   return (
-    <section id="proceso" className="bg-surface py-24 lg:py-36">
+    <section
+      id="proceso"
+      className="py-24 lg:py-36"
+      style={{
+        background: "linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%)",
+      }}
+    >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-20">
           <ScrollReveal>
             <p
               className="text-accent text-xl tracking-[0.2em] uppercase mb-4"
-              style={{
-                fontFamily: "var(--font-barlow), system-ui, sans-serif",
-              }}
+              style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}
             >
               Cómo trabajamos
             </p>
@@ -61,14 +65,16 @@ export default function Process() {
           <TextSplit
             text="Nuestro proceso"
             as="h2"
-            className="text-foreground"
+            className="text-background"
           />
         </div>
 
         <div className="relative">
-          {/* Lines sit behind step content — z-0 keeps them under z-10 step items */}
-          <div className="hidden lg:block absolute top-[82px] left-[12.5%] right-[12.5%] h-px bg-accent/12 z-0" />
-          <LineReveal className="hidden lg:block absolute top-[82px] left-[12.5%] right-[12.5%] h-px bg-accent/45 z-0" />
+          <div
+            className="hidden lg:block absolute top-[82px] left-[12.5%] right-[12.5%] h-px z-0"
+            style={{ backgroundColor: "rgba(255,255,255,0.15)" }}
+          />
+          <LineReveal className="hidden lg:block absolute top-[82px] left-[12.5%] right-[12.5%] h-px z-0 bg-accent/55" />
 
           <StaggerReveal
             className="grid grid-cols-1 lg:grid-cols-4 gap-14 lg:gap-8"
@@ -81,21 +87,26 @@ export default function Process() {
                 key={number}
                 className="relative z-10 flex flex-col items-center text-center"
               >
-                {/* Number above icon — in normal flow, never hidden behind circle */}
                 <div
-                  className="text-accent/20 leading-none select-none pointer-events-none"
+                  className="leading-none select-none pointer-events-none"
                   style={{
                     fontFamily: "var(--font-barlow-condensed), sans-serif",
                     fontSize: "3rem",
                     fontWeight: 700,
+                    color: "rgba(255,255,255,0.18)",
                   }}
                   aria-hidden="true"
                 >
                   {number}
                 </div>
 
-                {/* Icon circle — mt-2 gap after number, mb-6 before title */}
-                <div className="mt-2 mb-6 w-[52px] h-[52px] rounded-full bg-background border border-accent/50 flex items-center justify-center">
+                <div
+                  className="mt-2 mb-6 w-[52px] h-[52px] rounded-full flex items-center justify-center"
+                  style={{
+                    backgroundColor: "rgba(255,255,255,0.12)",
+                    border: "1px solid rgba(14,165,233,0.5)",
+                  }}
+                >
                   <Icon
                     size={22}
                     className="text-accent"
@@ -104,11 +115,12 @@ export default function Process() {
                   />
                 </div>
 
-                <h5 className="text-foreground mb-3">{title}</h5>
+                <h5 className="text-background mb-3">{title}</h5>
                 <p
-                  className="text-foreground-muted text-xl leading-relaxed max-w-[220px]"
+                  className="text-xl leading-relaxed max-w-[220px]"
                   style={{
                     fontFamily: "var(--font-barlow), system-ui, sans-serif",
+                    color: "rgba(255,255,255,0.72)",
                   }}
                 >
                   {description}
