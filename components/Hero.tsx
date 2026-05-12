@@ -16,7 +16,7 @@ export default function Hero() {
         speed={0.55}
       >
         <Image
-          src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80"
+          src="/images/hero_background.webp"
           alt="Obra de construcción de alto estándar en Buenos Aires"
           fill
           className="object-cover object-center"

@@ -10,7 +10,7 @@ export default function CTABanner() {
     <section className="relative py-32 lg:py-44 overflow-hidden">
       <ParallaxEl className="absolute inset-0 scale-[1.2]" speed={0.5}>
         <Image
-          src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80"
+          src="/images/cta_banner_background.webp"
           alt="Construcción de alto estándar — OBRA-PRIMA"
           fill
           className="object-cover object-center"

@@ -19,7 +19,7 @@ export default function About() {
           <div className="relative order-2 lg:order-1">
             <RevealImage className="relative aspect-[4/5] lg:aspect-auto lg:h-[620px]">
               <Image
-                src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=900&q=80"
+                src="/images/about_us_background.webp"
                 alt="Equipo de OBRA-PRIMA en una obra de construcción de alto estándar"
                 fill
                 className="object-cover"
