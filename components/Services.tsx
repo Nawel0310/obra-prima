@@ -46,7 +46,7 @@ export default function Services() {
             <p
               className="text-accent text-xs tracking-[0.2em] uppercase mb-4"
               style={{
-                fontFamily: "var(--font-outfit), system-ui, sans-serif",
+                fontFamily: "var(--font-barlow), system-ui, sans-serif",
               }}
             >
               Lo que hacemos
@@ -81,7 +81,7 @@ export default function Services() {
               <p
                 className="text-text-muted leading-relaxed mb-6"
                 style={{
-                  fontFamily: "var(--font-outfit), system-ui, sans-serif",
+                  fontFamily: "var(--font-barlow), system-ui, sans-serif",
                 }}
               >
                 {description}
@@ -89,7 +89,7 @@ export default function Services() {
               <span
                 className="text-accent text-sm tracking-wide inline-block group-hover:translate-x-1.5 transition-transform duration-200"
                 style={{
-                  fontFamily: "var(--font-outfit), system-ui, sans-serif",
+                  fontFamily: "var(--font-barlow), system-ui, sans-serif",
                 }}
               >
                 Ver más →

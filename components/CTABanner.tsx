@@ -30,7 +30,7 @@ export default function CTABanner() {
         <ScrollReveal delay={0.2}>
           <p
             className="text-text-muted text-lg leading-relaxed mb-12"
-            style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}
+            style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}
           >
             En OBRA-PRIMA te acompañamos desde el primer boceto hasta la llave
             en mano.
@@ -43,7 +43,7 @@ export default function CTABanner() {
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center bg-accent text-black font-semibold text-sm tracking-[0.18em] uppercase px-12 py-5 hover:bg-accent-hover hover:scale-[1.03] transition-all duration-200 cursor-none"
-            style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}
+            style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}
           >
             Pedí tu presupuesto gratis
           </a>

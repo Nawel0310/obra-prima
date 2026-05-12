@@ -63,7 +63,7 @@ export default function WhyUs() {
             <p
               className="text-accent text-xs tracking-[0.2em] uppercase mb-4"
               style={{
-                fontFamily: "var(--font-outfit), system-ui, sans-serif",
+                fontFamily: "var(--font-barlow), system-ui, sans-serif",
               }}
             >
               Diferencial
@@ -97,7 +97,7 @@ export default function WhyUs() {
                 <p
                   className="text-text-muted text-sm leading-relaxed"
                   style={{
-                    fontFamily: "var(--font-outfit), system-ui, sans-serif",
+                    fontFamily: "var(--font-barlow), system-ui, sans-serif",
                   }}
                 >
                   {description}

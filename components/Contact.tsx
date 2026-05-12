@@ -70,7 +70,7 @@ export default function Contact() {
     setErrors((prev) => ({ ...prev, [name]: undefined }));
   }
 
-  const bodyFont = { fontFamily: "var(--font-outfit), system-ui, sans-serif" };
+  const bodyFont = { fontFamily: "var(--font-barlow), system-ui, sans-serif" };
 
   return (
     <section id="contacto" className="bg-bg py-24 lg:py-36">

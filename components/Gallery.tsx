@@ -59,7 +59,7 @@ export default function Gallery() {
             <p
               className="text-accent text-xs tracking-[0.2em] uppercase mb-4"
               style={{
-                fontFamily: "var(--font-outfit), system-ui, sans-serif",
+                fontFamily: "var(--font-barlow), system-ui, sans-serif",
               }}
             >
               Portfolio

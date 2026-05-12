@@ -54,7 +54,7 @@ export default function Hero() {
         <p
           className="text-text-muted text-lg leading-relaxed max-w-lg mb-10"
           style={{
-            fontFamily: "var(--font-outfit), system-ui, sans-serif",
+            fontFamily: "var(--font-barlow), system-ui, sans-serif",
             animation: "fade-in-up 0.9s ease-out 0.35s both",
           }}
         >
@@ -69,14 +69,14 @@ export default function Hero() {
           <a
             href="#servicios"
             className="inline-flex items-center justify-center bg-accent text-black font-semibold text-sm tracking-[0.12em] uppercase px-8 py-4 hover:bg-accent-hover transition-colors duration-200 cursor-none"
-            style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}
+            style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}
           >
             Ver servicios
           </a>
           <a
             href="#galeria"
             className="inline-flex items-center justify-center border border-accent text-accent font-semibold text-sm tracking-[0.12em] uppercase px-8 py-4 hover:bg-accent/10 transition-colors duration-200 cursor-none"
-            style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}
+            style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}
           >
             Ver galería
           </a>

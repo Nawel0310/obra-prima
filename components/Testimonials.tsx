@@ -42,7 +42,7 @@ export default function Testimonials() {
             <p
               className="text-accent text-xs tracking-[0.2em] uppercase mb-4"
               style={{
-                fontFamily: "var(--font-outfit), system-ui, sans-serif",
+                fontFamily: "var(--font-barlow), system-ui, sans-serif",
               }}
             >
               Lo que dicen
@@ -65,7 +65,7 @@ export default function Testimonials() {
               <div
                 className="text-accent leading-none mb-4 select-none"
                 style={{
-                  fontFamily: "var(--font-cormorant), Georgia, serif",
+                  fontFamily: "var(--font-barlow-condensed), sans-serif",
                   fontSize: "5rem",
                   lineHeight: 0.8,
                 }}
@@ -76,7 +76,7 @@ export default function Testimonials() {
               <blockquote
                 className="text-text-muted leading-relaxed flex-1 mb-8"
                 style={{
-                  fontFamily: "var(--font-outfit), system-ui, sans-serif",
+                  fontFamily: "var(--font-barlow), system-ui, sans-serif",
                 }}
               >
                 {quote}
@@ -89,7 +89,7 @@ export default function Testimonials() {
                   <span
                     className="text-black text-sm font-semibold"
                     style={{
-                      fontFamily: "var(--font-outfit), system-ui, sans-serif",
+                      fontFamily: "var(--font-barlow), system-ui, sans-serif",
                     }}
                   >
                     {initials}
@@ -100,7 +100,7 @@ export default function Testimonials() {
                   <p
                     className="text-text-muted text-xs mt-0.5"
                     style={{
-                      fontFamily: "var(--font-outfit), system-ui, sans-serif",
+                      fontFamily: "var(--font-barlow), system-ui, sans-serif",
                     }}
                   >
                     {detail}
@@ -121,7 +121,7 @@ export default function Testimonials() {
               <div
                 className="text-accent leading-none mb-4 select-none"
                 style={{
-                  fontFamily: "var(--font-cormorant), Georgia, serif",
+                  fontFamily: "var(--font-barlow-condensed), sans-serif",
                   fontSize: "5rem",
                   lineHeight: 0.8,
                 }}
@@ -132,7 +132,7 @@ export default function Testimonials() {
               <blockquote
                 className="text-text-muted leading-relaxed flex-1 mb-8"
                 style={{
-                  fontFamily: "var(--font-outfit), system-ui, sans-serif",
+                  fontFamily: "var(--font-barlow), system-ui, sans-serif",
                 }}
               >
                 {quote}
@@ -142,7 +142,7 @@ export default function Testimonials() {
                   <span
                     className="text-black text-sm font-semibold"
                     style={{
-                      fontFamily: "var(--font-outfit), system-ui, sans-serif",
+                      fontFamily: "var(--font-barlow), system-ui, sans-serif",
                     }}
                   >
                     {initials}
@@ -153,7 +153,7 @@ export default function Testimonials() {
                   <p
                     className="text-text-muted text-xs mt-0.5"
                     style={{
-                      fontFamily: "var(--font-outfit), system-ui, sans-serif",
+                      fontFamily: "var(--font-barlow), system-ui, sans-serif",
                     }}
                   >
                     {detail}

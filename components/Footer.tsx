@@ -10,7 +10,7 @@ const navLinks = [
 
 const serviceLinks = ["Viviendas", "Reformas", "Ampliaciones", "Comercial"];
 
-const bodyFont = { fontFamily: "var(--font-outfit), system-ui, sans-serif" };
+const bodyFont = { fontFamily: "var(--font-barlow), system-ui, sans-serif" };
 
 export default function Footer() {
   return (
@@ -22,7 +22,7 @@ export default function Footer() {
               <span
                 className="text-accent block"
                 style={{
-                  fontFamily: "var(--font-cormorant), Georgia, serif",
+                  fontFamily: "var(--font-barlow-condensed), sans-serif",
                   fontSize: "1.414rem",
                   fontWeight: 700,
                   lineHeight: 1.2,

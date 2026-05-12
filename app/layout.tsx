@@ -1,20 +1,20 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Outfit } from "next/font/google";
+import { Barlow_Condensed, Barlow } from "next/font/google";
 import "./globals.css";
 import { CustomCursor } from "@/components/animations/CustomCursor";
 import { AnimationsInit } from "@/components/animations/AnimationsInit";
 
-const cormorant = Cormorant_Garamond({
+const barlowCondensed = Barlow_Condensed({
   weight: "700",
   subsets: ["latin"],
-  variable: "--font-cormorant",
+  variable: "--font-barlow-condensed",
   display: "swap",
 });
 
-const outfit = Outfit({
+const barlow = Barlow({
   weight: ["400", "600"],
   subsets: ["latin"],
-  variable: "--font-outfit",
+  variable: "--font-barlow",
   display: "swap",
 });
 
@@ -30,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className={`${cormorant.variable} ${outfit.variable}`}>
+    <html lang="es" className={`${barlowCondensed.variable} ${barlow.variable}`}>
       <body>
         <CustomCursor />
         <AnimationsInit />

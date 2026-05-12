@@ -52,7 +52,7 @@ export default function Process() {
             <p
               className="text-accent text-xs tracking-[0.2em] uppercase mb-4"
               style={{
-                fontFamily: "var(--font-outfit), system-ui, sans-serif",
+                fontFamily: "var(--font-barlow), system-ui, sans-serif",
               }}
             >
               Cómo trabajamos
@@ -85,7 +85,7 @@ export default function Process() {
                 <div
                   className="text-accent/20 leading-none select-none pointer-events-none"
                   style={{
-                    fontFamily: "var(--font-cormorant), Georgia, serif",
+                    fontFamily: "var(--font-barlow-condensed), sans-serif",
                     fontSize: "3rem",
                     fontWeight: 700,
                   }}
@@ -108,7 +108,7 @@ export default function Process() {
                 <p
                   className="text-text-muted text-sm leading-relaxed max-w-[220px]"
                   style={{
-                    fontFamily: "var(--font-outfit), system-ui, sans-serif",
+                    fontFamily: "var(--font-barlow), system-ui, sans-serif",
                   }}
                 >
                   {description}

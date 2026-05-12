@@ -41,7 +41,7 @@ export default function About() {
                   <div
                     className="text-accent"
                     style={{
-                      fontFamily: "var(--font-cormorant), Georgia, serif",
+                      fontFamily: "var(--font-barlow-condensed), sans-serif",
                       fontSize: "clamp(1.75rem, 3vw, 2.827rem)",
                       fontWeight: 700,
                       lineHeight: 1.1,
@@ -52,7 +52,7 @@ export default function About() {
                   <div
                     className="text-text-muted text-sm mt-1 leading-snug"
                     style={{
-                      fontFamily: "var(--font-outfit), system-ui, sans-serif",
+                      fontFamily: "var(--font-barlow), system-ui, sans-serif",
                     }}
                   >
                     {label}
@@ -65,7 +65,7 @@ export default function About() {
               <p
                 className="text-accent text-xs tracking-[0.2em] uppercase mb-4"
                 style={{
-                  fontFamily: "var(--font-outfit), system-ui, sans-serif",
+                  fontFamily: "var(--font-barlow), system-ui, sans-serif",
                 }}
               >
                 Quiénes somos
@@ -84,7 +84,7 @@ export default function About() {
             <ScrollReveal
               delay={0.2}
               className="space-y-5 text-text-muted leading-relaxed"
-              style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif" }}
+              style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}
             >
               <p>
                 OBRA-PRIMA nació hace más de 25 años con una convicción simple:
@@ -109,7 +109,7 @@ export default function About() {
                 href="#contacto"
                 className="inline-flex items-center justify-center border border-accent text-accent font-semibold text-sm tracking-[0.12em] uppercase px-8 py-4 hover:bg-accent/10 transition-colors duration-200 cursor-none"
                 style={{
-                  fontFamily: "var(--font-outfit), system-ui, sans-serif",
+                  fontFamily: "var(--font-barlow), system-ui, sans-serif",
                 }}
               >
                 Hablemos de tu proyecto
