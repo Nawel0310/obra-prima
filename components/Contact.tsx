@@ -25,7 +25,7 @@ interface FormErrors {
 const projectTypes = ["Vivienda", "Reforma", "Ampliación", "Comercial", "Otro"];
 
 const inputBase =
-  "w-full bg-surface-2 border border-border text-text-primary px-4 py-3 focus:outline-none focus:border-accent transition-colors duration-200 placeholder:text-text-muted/40";
+  "w-full bg-muted border border-border text-foreground px-4 py-3 focus:outline-none focus:border-accent transition-colors duration-200 placeholder:text-foreground-muted/40";
 
 export default function Contact() {
   const [form, setForm] = useState<FormData>({
@@ -73,27 +73,27 @@ export default function Contact() {
   const bodyFont = { fontFamily: "var(--font-barlow), system-ui, sans-serif" };
 
   return (
-    <section id="contacto" className="bg-bg py-24 lg:py-36">
+    <section id="contacto" className="bg-background py-24 lg:py-36">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
           <ScrollReveal>
-            <p className="text-accent text-xs tracking-[0.2em] uppercase mb-4" style={bodyFont}>
+            <p className="text-accent text-xl tracking-[0.2em] uppercase mb-4" style={bodyFont}>
               Contacto
             </p>
           </ScrollReveal>
           <TextSplit
             text="Hablemos de tu proyecto"
             as="h2"
-            className="text-text-primary"
+            className="text-foreground"
           />
         </div>
 
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
           <div>
             {submitted ? (
-              <div className="bg-surface-2 border border-accent/30 p-8">
+              <div className="bg-muted border border-accent/30 p-8">
                 <h4 className="text-accent mb-3">¡Consulta enviada!</h4>
-                <p className="text-text-muted leading-relaxed" style={bodyFont}>
+                <p className="text-foreground-muted leading-relaxed" style={bodyFont}>
                   Gracias por contactarte con OBRA-PRIMA. Te respondemos dentro
                   de las próximas 24 horas hábiles. Si necesitás una respuesta
                   inmediata, podés escribirnos por WhatsApp.
@@ -102,7 +102,7 @@ export default function Contact() {
                   href={WA_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center mt-6 text-accent text-sm hover:underline cursor-pointer"
+                  className="inline-flex items-center mt-6 text-accent hover:underline cursor-pointer"
                   style={bodyFont}
                 >
                   Escribir por WhatsApp →
@@ -113,7 +113,7 @@ export default function Contact() {
                 <div>
                   <label
                     htmlFor="nombre"
-                    className="text-text-muted text-sm mb-2 block"
+                    className="text-foreground-muted mb-2 block"
                     style={bodyFont}
                   >
                     Nombre completo *
@@ -130,7 +130,7 @@ export default function Contact() {
                     autoComplete="name"
                   />
                   {errors.nombre && (
-                    <p className="text-red-400 text-xs mt-1" style={bodyFont}>
+                    <p className="text-red-400 text-xl mt-1" style={bodyFont}>
                       {errors.nombre}
                     </p>
                   )}
@@ -140,7 +140,7 @@ export default function Contact() {
                   <div>
                     <label
                       htmlFor="email"
-                      className="text-text-muted text-sm mb-2 block"
+                      className="text-foreground-muted mb-2 block"
                       style={bodyFont}
                     >
                       Email *
@@ -157,7 +157,7 @@ export default function Contact() {
                       autoComplete="email"
                     />
                     {errors.email && (
-                      <p className="text-red-400 text-xs mt-1" style={bodyFont}>
+                      <p className="text-red-400 text-xl mt-1" style={bodyFont}>
                         {errors.email}
                       </p>
                     )}
@@ -165,7 +165,7 @@ export default function Contact() {
                   <div>
                     <label
                       htmlFor="telefono"
-                      className="text-text-muted text-sm mb-2 block"
+                      className="text-foreground-muted mb-2 block"
                       style={bodyFont}
                     >
                       Teléfono
@@ -187,7 +187,7 @@ export default function Contact() {
                 <div>
                   <label
                     htmlFor="tipoProyecto"
-                    className="text-text-muted text-sm mb-2 block"
+                    className="text-foreground-muted mb-2 block"
                     style={bodyFont}
                   >
                     Tipo de proyecto *
@@ -208,7 +208,7 @@ export default function Contact() {
                     ))}
                   </select>
                   {errors.tipoProyecto && (
-                    <p className="text-red-400 text-xs mt-1" style={bodyFont}>
+                    <p className="text-red-400 text-xl mt-1" style={bodyFont}>
                       {errors.tipoProyecto}
                     </p>
                   )}
@@ -217,7 +217,7 @@ export default function Contact() {
                 <div>
                   <label
                     htmlFor="mensaje"
-                    className="text-text-muted text-sm mb-2 block"
+                    className="text-foreground-muted mb-2 block"
                     style={bodyFont}
                   >
                     Mensaje *
@@ -233,7 +233,7 @@ export default function Contact() {
                     style={bodyFont}
                   />
                   {errors.mensaje && (
-                    <p className="text-red-400 text-xs mt-1" style={bodyFont}>
+                    <p className="text-red-400 text-xl mt-1" style={bodyFont}>
                       {errors.mensaje}
                     </p>
                   )}
@@ -241,7 +241,7 @@ export default function Contact() {
 
                 <button
                   type="submit"
-                  className="w-full bg-accent text-black font-semibold text-sm tracking-[0.12em] uppercase px-8 py-4 hover:bg-accent-hover transition-colors duration-200 cursor-pointer"
+                  className="w-full bg-accent text-black font-semibold tracking-[0.12em] uppercase px-8 py-4 hover:opacity-90 transition-colors duration-200 cursor-pointer"
                   style={bodyFont}
                 >
                   Enviar consulta
@@ -252,7 +252,7 @@ export default function Contact() {
 
           <div className="flex flex-col gap-10">
             <div>
-              <h4 className="text-text-primary mb-8">Información de contacto</h4>
+              <h4 className="text-foreground mb-8">Información de contacto</h4>
               <div className="space-y-5">
                 {(
                   [
@@ -280,7 +280,7 @@ export default function Contact() {
                 ).map(({ Icon, label, href }) => (
                   <div key={label} className="flex items-start gap-4">
                     <Icon
-                      size={17}
+                      size={20}
                       className="text-accent flex-shrink-0 mt-0.5"
                       strokeWidth={1.5}
                       aria-hidden="true"
@@ -288,13 +288,13 @@ export default function Contact() {
                     {href ? (
                       <a
                         href={href}
-                        className="text-text-muted text-sm hover:text-accent transition-colors duration-200"
+                        className="text-foreground-muted hover:text-accent transition-colors duration-200"
                         style={bodyFont}
                       >
                         {label}
                       </a>
                     ) : (
-                      <span className="text-text-muted text-sm" style={bodyFont}>
+                      <span className="text-foreground-muted" style={bodyFont}>
                         {label}
                       </span>
                     )}
@@ -304,14 +304,14 @@ export default function Contact() {
             </div>
 
             <div>
-              <p className="text-text-muted text-sm mb-4" style={bodyFont}>
+              <p className="text-foreground-muted mb-4" style={bodyFont}>
                 Seguinos en redes
               </p>
               <div className="flex gap-3">
                 <a
                   href="#"
                   aria-label="OBRA-PRIMA en Instagram"
-                  className="w-10 h-10 border border-border flex items-center justify-center text-text-muted hover:text-accent hover:border-accent transition-colors duration-200 cursor-pointer"
+                  className="w-10 h-10 border border-border flex items-center justify-center text-foreground-muted hover:text-accent hover:border-accent transition-colors duration-200 cursor-pointer"
                 >
                   <svg
                     width="17"
@@ -332,7 +332,7 @@ export default function Contact() {
                 <a
                   href="#"
                   aria-label="OBRA-PRIMA en LinkedIn"
-                  className="w-10 h-10 border border-border flex items-center justify-center text-text-muted hover:text-accent hover:border-accent transition-colors duration-200 cursor-pointer"
+                  className="w-10 h-10 border border-border flex items-center justify-center text-foreground-muted hover:text-accent hover:border-accent transition-colors duration-200 cursor-pointer"
                 >
                   <svg
                     width="17"
@@ -353,15 +353,15 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="bg-surface-2 border border-border p-7">
-              <p className="text-text-muted text-sm mb-4" style={bodyFont}>
+            <div className="bg-muted border border-border p-7">
+              <p className="text-foreground-muted mb-4" style={bodyFont}>
                 ¿Preferís hablar directamente? Te atendemos por WhatsApp.
               </p>
               <a
                 href={WA_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-accent text-sm font-semibold hover:underline cursor-pointer"
+                className="inline-flex items-center gap-2 text-accent font-semibold hover:underline cursor-pointer"
                 style={bodyFont}
               >
                 Escribir por WhatsApp →

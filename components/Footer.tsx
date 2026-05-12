@@ -31,14 +31,14 @@ export default function Footer() {
                 OBRA-PRIMA
               </span>
               <span
-                className="text-text-muted"
-                style={{ ...bodyFont, fontSize: "0.707rem" }}
+                className="text-foreground-muted"
+                style={{ ...bodyFont, fontSize: "1.25rem" }}
               >
                 Construimos lo que imaginás.
               </span>
             </div>
             <p
-              className="text-text-muted text-sm leading-relaxed max-w-[220px]"
+              className="text-foreground-muted leading-relaxed max-w-[220px]"
               style={bodyFont}
             >
               Constructora argentina especializada en viviendas, reformas,
@@ -48,7 +48,7 @@ export default function Footer() {
 
           <div>
             <h6
-              className="text-text-primary text-xs tracking-[0.18em] uppercase mb-5 font-semibold"
+              className="text-foreground text-xl tracking-[0.18em] uppercase mb-5 font-semibold"
               style={bodyFont}
             >
               Navegación
@@ -58,7 +58,7 @@ export default function Footer() {
                 <li key={href}>
                   <a
                     href={href}
-                    className="text-text-muted text-sm hover:text-accent transition-colors duration-200 cursor-pointer"
+                    className="text-foreground-muted hover:text-accent transition-colors duration-200 cursor-pointer"
                     style={bodyFont}
                   >
                     {label}
@@ -70,7 +70,7 @@ export default function Footer() {
 
           <div>
             <h6
-              className="text-text-primary text-xs tracking-[0.18em] uppercase mb-5 font-semibold"
+              className="text-foreground text-xl tracking-[0.18em] uppercase mb-5 font-semibold"
               style={bodyFont}
             >
               Servicios
@@ -80,7 +80,7 @@ export default function Footer() {
                 <li key={service}>
                   <a
                     href="#servicios"
-                    className="text-text-muted text-sm hover:text-accent transition-colors duration-200 cursor-pointer"
+                    className="text-foreground-muted hover:text-accent transition-colors duration-200 cursor-pointer"
                     style={bodyFont}
                   >
                     {service}
@@ -92,7 +92,7 @@ export default function Footer() {
 
           <div>
             <h6
-              className="text-text-primary text-xs tracking-[0.18em] uppercase mb-5 font-semibold"
+              className="text-foreground text-xl tracking-[0.18em] uppercase mb-5 font-semibold"
               style={bodyFont}
             >
               Contacto
@@ -100,14 +100,14 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <Phone
-                  size={14}
+                  size={16}
                   className="text-accent flex-shrink-0 mt-0.5"
                   strokeWidth={1.5}
                   aria-hidden="true"
                 />
                 <a
                   href="tel:+541100000000"
-                  className="text-text-muted text-sm hover:text-accent transition-colors duration-200"
+                  className="text-foreground-muted hover:text-accent transition-colors duration-200"
                   style={bodyFont}
                 >
                   +54 11 0000-0000
@@ -115,14 +115,14 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-3">
                 <Mail
-                  size={14}
+                  size={16}
                   className="text-accent flex-shrink-0 mt-0.5"
                   strokeWidth={1.5}
                   aria-hidden="true"
                 />
                 <a
                   href="mailto:contacto@obra-prima.com.ar"
-                  className="text-text-muted text-sm hover:text-accent transition-colors duration-200"
+                  className="text-foreground-muted hover:text-accent transition-colors duration-200"
                   style={bodyFont}
                 >
                   contacto@obra-prima.com.ar
@@ -130,12 +130,12 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-3">
                 <MapPin
-                  size={14}
+                  size={16}
                   className="text-accent flex-shrink-0 mt-0.5"
                   strokeWidth={1.5}
                   aria-hidden="true"
                 />
-                <span className="text-text-muted text-sm" style={bodyFont}>
+                <span className="text-foreground-muted" style={bodyFont}>
                   Av. del Ejemplo 1234, CABA
                 </span>
               </li>
@@ -146,20 +146,20 @@ export default function Footer() {
 
       <div className="border-t border-border">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-text-muted text-xs" style={bodyFont}>
+          <p className="text-foreground-muted text-xl" style={bodyFont}>
             © 2025 OBRA-PRIMA. Todos los derechos reservados.
           </p>
           <div className="flex gap-6">
             <a
               href="#"
-              className="text-text-muted text-xs hover:text-accent transition-colors duration-200 cursor-pointer"
+              className="text-foreground-muted text-xl hover:text-accent transition-colors duration-200 cursor-pointer"
               style={bodyFont}
             >
               Política de privacidad
             </a>
             <a
               href="#"
-              className="text-text-muted text-xs hover:text-accent transition-colors duration-200 cursor-pointer"
+              className="text-foreground-muted text-xl hover:text-accent transition-colors duration-200 cursor-pointer"
               style={bodyFont}
             >
               Términos de uso

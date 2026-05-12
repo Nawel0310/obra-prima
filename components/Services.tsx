@@ -44,7 +44,7 @@ export default function Services() {
         <div className="text-center mb-16">
           <ScrollReveal>
             <p
-              className="text-accent text-xs tracking-[0.2em] uppercase mb-4"
+              className="text-accent text-xl tracking-[0.2em] uppercase mb-4"
               style={{
                 fontFamily: "var(--font-barlow), system-ui, sans-serif",
               }}
@@ -55,7 +55,7 @@ export default function Services() {
           <TextSplit
             text="Nuestros servicios"
             as="h2"
-            className="text-text-primary"
+            className="text-foreground"
           />
         </div>
 
@@ -67,7 +67,7 @@ export default function Services() {
           {services.map(({ icon: Icon, title, description }) => (
             <article
               key={title}
-              className="group bg-surface-2 border border-border p-8 lg:p-10 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(201,169,110,0.07)] cursor-none"
+              className="group bg-muted border border-border p-8 lg:p-10 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(201,169,110,0.07)]"
             >
               <div className="mb-6">
                 <Icon
@@ -79,7 +79,7 @@ export default function Services() {
               </div>
               <h4 className="text-accent mb-3">{title}</h4>
               <p
-                className="text-text-muted leading-relaxed mb-6"
+                className="text-foreground-muted leading-relaxed mb-6"
                 style={{
                   fontFamily: "var(--font-barlow), system-ui, sans-serif",
                 }}
@@ -87,7 +87,7 @@ export default function Services() {
                 {description}
               </p>
               <span
-                className="text-accent text-sm tracking-wide inline-block group-hover:translate-x-1.5 transition-transform duration-200"
+                className="text-accent text-xl tracking-wide inline-block group-hover:translate-x-1.5 transition-transform duration-200"
                 style={{
                   fontFamily: "var(--font-barlow), system-ui, sans-serif",
                 }}

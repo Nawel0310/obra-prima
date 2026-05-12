@@ -46,13 +46,13 @@ export default function Hero() {
           style={{ animation: "fade-in-up 0.9s ease-out 0.1s both" }}
         >
           <span className="block text-accent">OBRA-PRIMA</span>
-          <span className="block text-text-primary">
+          <span className="block text-background">
             Construimos lo que imaginás.
           </span>
         </h1>
 
         <p
-          className="text-text-muted text-lg leading-relaxed max-w-lg mb-10"
+          className="text-background/80 text-xl leading-relaxed max-w-lg mb-10"
           style={{
             fontFamily: "var(--font-barlow), system-ui, sans-serif",
             animation: "fade-in-up 0.9s ease-out 0.35s both",
@@ -68,14 +68,14 @@ export default function Hero() {
         >
           <a
             href="#servicios"
-            className="inline-flex items-center justify-center bg-accent text-black font-semibold text-sm tracking-[0.12em] uppercase px-8 py-4 hover:bg-accent-hover transition-colors duration-200 cursor-none"
+            className="inline-flex items-center justify-center bg-accent text-black font-semibold text-xl tracking-[0.12em] uppercase px-8 py-4 hover:opacity-90 transition-opacity duration-200"
             style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}
           >
             Ver servicios
           </a>
           <a
             href="#galeria"
-            className="inline-flex items-center justify-center border border-accent text-accent font-semibold text-sm tracking-[0.12em] uppercase px-8 py-4 hover:bg-accent/10 transition-colors duration-200 cursor-none"
+            className="inline-flex items-center justify-center border border-accent text-accent font-semibold text-xl tracking-[0.12em] uppercase px-8 py-4 hover:bg-accent/10 transition-colors duration-200"
             style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}
           >
             Ver galería

@@ -52,12 +52,12 @@ const images: GalleryImage[] = [
 
 export default function Gallery() {
   return (
-    <section id="galeria" className="bg-bg py-24 lg:py-36">
+    <section id="galeria" className="bg-background py-24 lg:py-36">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
           <ScrollReveal>
             <p
-              className="text-accent text-xs tracking-[0.2em] uppercase mb-4"
+              className="text-accent text-xl tracking-[0.2em] uppercase mb-4"
               style={{
                 fontFamily: "var(--font-barlow), system-ui, sans-serif",
               }}
@@ -68,7 +68,7 @@ export default function Gallery() {
           <TextSplit
             text="Nuestras obras"
             as="h2"
-            className="text-text-primary"
+            className="text-foreground"
           />
         </div>
 
@@ -79,7 +79,7 @@ export default function Gallery() {
               direction="up"
               duration={1.1}
               delay={Math.min(i * 0.07, 0.35)}
-              className={`relative overflow-hidden group cursor-none ${
+              className={`relative overflow-hidden group ${
                 wide
                   ? "md:col-span-2 lg:col-span-2 aspect-video"
                   : "aspect-square"

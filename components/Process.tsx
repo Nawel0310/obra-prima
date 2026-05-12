@@ -50,7 +50,7 @@ export default function Process() {
         <div className="text-center mb-20">
           <ScrollReveal>
             <p
-              className="text-accent text-xs tracking-[0.2em] uppercase mb-4"
+              className="text-accent text-xl tracking-[0.2em] uppercase mb-4"
               style={{
                 fontFamily: "var(--font-barlow), system-ui, sans-serif",
               }}
@@ -61,7 +61,7 @@ export default function Process() {
           <TextSplit
             text="Nuestro proceso"
             as="h2"
-            className="text-text-primary"
+            className="text-foreground"
           />
         </div>
 
@@ -95,7 +95,7 @@ export default function Process() {
                 </div>
 
                 {/* Icon circle — mt-2 gap after number, mb-6 before title */}
-                <div className="mt-2 mb-6 w-[52px] h-[52px] rounded-full bg-bg border border-accent/50 flex items-center justify-center">
+                <div className="mt-2 mb-6 w-[52px] h-[52px] rounded-full bg-background border border-accent/50 flex items-center justify-center">
                   <Icon
                     size={22}
                     className="text-accent"
@@ -104,9 +104,9 @@ export default function Process() {
                   />
                 </div>
 
-                <h5 className="text-text-primary mb-3">{title}</h5>
+                <h5 className="text-foreground mb-3">{title}</h5>
                 <p
-                  className="text-text-muted text-sm leading-relaxed max-w-[220px]"
+                  className="text-foreground-muted text-xl leading-relaxed max-w-[220px]"
                   style={{
                     fontFamily: "var(--font-barlow), system-ui, sans-serif",
                   }}

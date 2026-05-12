@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Barlow_Condensed, Barlow } from "next/font/google";
 import "./globals.css";
-import { CustomCursor } from "@/components/animations/CustomCursor";
 import { AnimationsInit } from "@/components/animations/AnimationsInit";
 
 const barlowCondensed = Barlow_Condensed({
@@ -32,7 +31,6 @@ export default function RootLayout({
   return (
     <html lang="es" className={`${barlowCondensed.variable} ${barlow.variable}`}>
       <body>
-        <CustomCursor />
         <AnimationsInit />
         {children}
       </body>

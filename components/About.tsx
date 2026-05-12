@@ -12,7 +12,7 @@ const stats = [
 
 export default function About() {
   return (
-    <section id="nosotros" className="bg-bg py-24 lg:py-36">
+    <section id="nosotros" className="bg-background py-24 lg:py-36">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           {/* Image with clip-path reveal */}
@@ -50,7 +50,7 @@ export default function About() {
                     <CountUp target={target} suffix={suffix} />
                   </div>
                   <div
-                    className="text-text-muted text-sm mt-1 leading-snug"
+                    className="text-foreground-muted text-xl mt-1 leading-snug"
                     style={{
                       fontFamily: "var(--font-barlow), system-ui, sans-serif",
                     }}
@@ -63,7 +63,7 @@ export default function About() {
 
             <ScrollReveal delay={0.1}>
               <p
-                className="text-accent text-xs tracking-[0.2em] uppercase mb-4"
+                className="text-accent text-xl tracking-[0.2em] uppercase mb-4"
                 style={{
                   fontFamily: "var(--font-barlow), system-ui, sans-serif",
                 }}
@@ -76,14 +76,14 @@ export default function About() {
               <TextSplit
                 text="Más de 25 años construyendo lo que importa."
                 as="h2"
-                className="text-text-primary"
+                className="text-foreground"
                 delay={0.15}
               />
             </div>
 
             <ScrollReveal
               delay={0.2}
-              className="space-y-5 text-text-muted leading-relaxed"
+              className="space-y-5 text-foreground-muted leading-relaxed"
               style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}
             >
               <p>
@@ -107,7 +107,7 @@ export default function About() {
             <ScrollReveal delay={0.3} className="mt-10">
               <a
                 href="#contacto"
-                className="inline-flex items-center justify-center border border-accent text-accent font-semibold text-sm tracking-[0.12em] uppercase px-8 py-4 hover:bg-accent/10 transition-colors duration-200 cursor-none"
+                className="inline-flex items-center justify-center border border-accent text-accent font-semibold text-xl tracking-[0.12em] uppercase px-8 py-4 hover:bg-accent/10 transition-colors duration-200"
                 style={{
                   fontFamily: "var(--font-barlow), system-ui, sans-serif",
                 }}

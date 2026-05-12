@@ -56,12 +56,12 @@ const reasons: Reason[] = [
 
 export default function WhyUs() {
   return (
-    <section id="por-que-elegirnos" className="bg-bg py-24 lg:py-36">
+    <section id="por-que-elegirnos" className="bg-background py-24 lg:py-36">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
           <ScrollReveal>
             <p
-              className="text-accent text-xs tracking-[0.2em] uppercase mb-4"
+              className="text-accent text-xl tracking-[0.2em] uppercase mb-4"
               style={{
                 fontFamily: "var(--font-barlow), system-ui, sans-serif",
               }}
@@ -72,7 +72,7 @@ export default function WhyUs() {
           <TextSplit
             text="¿Por qué elegirnos?"
             as="h2"
-            className="text-text-primary"
+            className="text-foreground"
           />
         </div>
 
@@ -84,7 +84,7 @@ export default function WhyUs() {
           {reasons.map(({ icon: Icon, title, description }) => (
             <article
               key={title}
-              className="bg-surface border-l-2 border-accent pl-6 py-6 pr-6 flex gap-4 items-start transition-all duration-300 hover:bg-surface-2 hover:shadow-[0_8px_40px_rgba(201,169,110,0.06)]"
+              className="bg-surface border-l-2 border-accent pl-6 py-6 pr-6 flex gap-4 items-start transition-all duration-300 hover:bg-muted hover:shadow-[0_8px_40px_rgba(201,169,110,0.06)]"
             >
               <Icon
                 size={20}
@@ -93,9 +93,9 @@ export default function WhyUs() {
                 aria-hidden="true"
               />
               <div>
-                <h5 className="text-text-primary mb-2">{title}</h5>
+                <h5 className="text-foreground mb-2">{title}</h5>
                 <p
-                  className="text-text-muted text-sm leading-relaxed"
+                  className="text-foreground-muted leading-relaxed"
                   style={{
                     fontFamily: "var(--font-barlow), system-ui, sans-serif",
                   }}

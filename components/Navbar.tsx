@@ -35,7 +35,7 @@ export default function Navbar() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled
-            ? "bg-bg/90 backdrop-blur-md border-b border-border"
+            ? "bg-background/90 backdrop-blur-md border-b border-border"
             : "bg-transparent"
         }`}
       >
@@ -56,10 +56,10 @@ export default function Navbar() {
               OBRA-PRIMA
             </span>
             <span
-              className="text-text-muted"
+              className="text-foreground-muted"
               style={{
                 fontFamily: "var(--font-barlow), system-ui, sans-serif",
-                fontSize: "0.707rem",
+                fontSize: "1.25rem",
                 letterSpacing: "0.06em",
               }}
             >
@@ -72,7 +72,7 @@ export default function Navbar() {
               <a
                 key={href}
                 href={href}
-                className="text-sm text-text-muted hover:text-text-primary tracking-wide transition-colors duration-200 cursor-pointer"
+                className="text-foreground-muted hover:text-foreground tracking-wide transition-colors duration-200 cursor-pointer"
                 style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}
               >
                 {label}
@@ -82,7 +82,7 @@ export default function Navbar() {
               href={WA_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm font-semibold bg-accent text-black px-5 py-2.5 rounded-full hover:bg-accent-hover transition-colors duration-200 cursor-pointer"
+              className="font-semibold bg-accent text-black px-5 py-2.5 rounded-full hover:opacity-90 transition-colors duration-200 cursor-pointer"
               style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}
             >
               Presupuesto gratis
@@ -92,7 +92,7 @@ export default function Navbar() {
           <button
             onClick={() => setMenuOpen((v) => !v)}
             aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"}
-            className="lg:hidden p-2 text-text-primary cursor-pointer"
+            className="lg:hidden p-2 text-foreground cursor-pointer"
           >
             {menuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -100,7 +100,7 @@ export default function Navbar() {
       </header>
 
       <div
-        className={`fixed inset-0 z-40 bg-bg/96 backdrop-blur-md flex flex-col items-center justify-center gap-10 transition-transform duration-300 lg:hidden ${
+        className={`fixed inset-0 z-40 bg-background/96 backdrop-blur-md flex flex-col items-center justify-center gap-10 transition-transform duration-300 lg:hidden ${
           menuOpen ? "translate-x-0" : "translate-x-full"
         }`}
         aria-hidden={!menuOpen}
@@ -110,7 +110,7 @@ export default function Navbar() {
             key={href}
             href={href}
             onClick={() => setMenuOpen(false)}
-            className="text-text-primary hover:text-accent transition-colors duration-200 cursor-pointer"
+            className="text-foreground hover:text-accent transition-colors duration-200 cursor-pointer"
             style={{
               fontFamily: "var(--font-barlow-condensed), sans-serif",
               fontSize: "2.5rem",
@@ -124,7 +124,7 @@ export default function Navbar() {
           href={WA_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="font-semibold bg-accent text-black px-8 py-3 rounded-full hover:bg-accent-hover transition-colors duration-200 mt-4 cursor-pointer"
+          className="font-semibold bg-accent text-black px-8 py-3 rounded-full hover:opacity-90 transition-colors duration-200 mt-4 cursor-pointer"
           style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}
         >
           Presupuesto gratis

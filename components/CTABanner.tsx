@@ -23,13 +23,13 @@ export default function CTABanner() {
         <TextSplit
           text="Tu próxima obra empieza con una conversación."
           as="h2"
-          className="text-text-primary mb-6"
+          className="text-background mb-6"
           delay={0.05}
         />
 
         <ScrollReveal delay={0.2}>
           <p
-            className="text-text-muted text-lg leading-relaxed mb-12"
+            className="text-background/80 text-xl leading-relaxed mb-12"
             style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}
           >
             En OBRA-PRIMA te acompañamos desde el primer boceto hasta la llave
@@ -42,7 +42,7 @@ export default function CTABanner() {
             href={WA_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center bg-accent text-black font-semibold text-sm tracking-[0.18em] uppercase px-12 py-5 hover:bg-accent-hover hover:scale-[1.03] transition-all duration-200 cursor-none"
+            className="inline-flex items-center justify-center bg-accent text-black font-semibold text-xl tracking-[0.18em] uppercase px-12 py-5 hover:opacity-90 hover:scale-[1.03] transition-all duration-200"
             style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}
           >
             Pedí tu presupuesto gratis

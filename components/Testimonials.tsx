@@ -40,7 +40,7 @@ export default function Testimonials() {
         <div className="text-center mb-16">
           <ScrollReveal>
             <p
-              className="text-accent text-xs tracking-[0.2em] uppercase mb-4"
+              className="text-accent text-xl tracking-[0.2em] uppercase mb-4"
               style={{
                 fontFamily: "var(--font-barlow), system-ui, sans-serif",
               }}
@@ -48,7 +48,7 @@ export default function Testimonials() {
               Lo que dicen
             </p>
           </ScrollReveal>
-          <TextSplit text="Testimonios" as="h2" className="text-text-primary" />
+          <TextSplit text="Testimonios" as="h2" className="text-foreground" />
         </div>
 
         {/* Desktop stagger grid */}
@@ -60,7 +60,7 @@ export default function Testimonials() {
           {testimonials.map(({ quote, name, detail, initials }) => (
             <article
               key={name}
-              className="bg-surface-2 border border-border p-8 lg:p-10 flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_60px_rgba(201,169,110,0.06)]"
+              className="bg-muted border border-border p-8 lg:p-10 flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_60px_rgba(201,169,110,0.06)]"
             >
               <div
                 className="text-accent leading-none mb-4 select-none"
@@ -74,7 +74,7 @@ export default function Testimonials() {
                 &ldquo;
               </div>
               <blockquote
-                className="text-text-muted leading-relaxed flex-1 mb-8"
+                className="text-foreground-muted leading-relaxed flex-1 mb-8"
                 style={{
                   fontFamily: "var(--font-barlow), system-ui, sans-serif",
                 }}
@@ -87,7 +87,7 @@ export default function Testimonials() {
                   aria-hidden="true"
                 >
                   <span
-                    className="text-black text-sm font-semibold"
+                    className="text-black text-xl font-semibold"
                     style={{
                       fontFamily: "var(--font-barlow), system-ui, sans-serif",
                     }}
@@ -96,9 +96,9 @@ export default function Testimonials() {
                   </span>
                 </div>
                 <div>
-                  <h5 className="text-text-primary">{name}</h5>
+                  <h5 className="text-foreground">{name}</h5>
                   <p
-                    className="text-text-muted text-xs mt-0.5"
+                    className="text-foreground-muted text-xl mt-0.5"
                     style={{
                       fontFamily: "var(--font-barlow), system-ui, sans-serif",
                     }}
@@ -116,7 +116,7 @@ export default function Testimonials() {
           {testimonials.map(({ quote, name, detail, initials }) => (
             <article
               key={name}
-              className="flex-shrink-0 w-[82vw] sm:w-[65vw] snap-start bg-surface-2 border border-border p-8 flex flex-col"
+              className="flex-shrink-0 w-[82vw] sm:w-[65vw] snap-start bg-muted border border-border p-8 flex flex-col"
             >
               <div
                 className="text-accent leading-none mb-4 select-none"
@@ -130,7 +130,7 @@ export default function Testimonials() {
                 &ldquo;
               </div>
               <blockquote
-                className="text-text-muted leading-relaxed flex-1 mb-8"
+                className="text-foreground-muted leading-relaxed flex-1 mb-8"
                 style={{
                   fontFamily: "var(--font-barlow), system-ui, sans-serif",
                 }}
@@ -140,7 +140,7 @@ export default function Testimonials() {
               <div className="flex items-center gap-4">
                 <div className="w-11 h-11 rounded-full bg-accent flex items-center justify-center flex-shrink-0">
                   <span
-                    className="text-black text-sm font-semibold"
+                    className="text-black text-xl font-semibold"
                     style={{
                       fontFamily: "var(--font-barlow), system-ui, sans-serif",
                     }}
@@ -149,9 +149,9 @@ export default function Testimonials() {
                   </span>
                 </div>
                 <div>
-                  <h5 className="text-text-primary">{name}</h5>
+                  <h5 className="text-foreground">{name}</h5>
                   <p
-                    className="text-text-muted text-xs mt-0.5"
+                    className="text-foreground-muted text-xl mt-0.5"
                     style={{
                       fontFamily: "var(--font-barlow), system-ui, sans-serif",
                     }}
