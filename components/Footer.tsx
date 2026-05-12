@@ -1,6 +1,7 @@
 "use client";
 
 import { Phone, Mail, MapPin } from "lucide-react";
+import Image from "next/image";
 
 const navLinks = [
   { href: "#nosotros", label: "Nosotros" },
@@ -21,22 +22,15 @@ export default function Footer() {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
           <div className="col-span-2 lg:col-span-1">
             <div className="mb-5">
-              <span
-                className="text-accent block"
-                style={{
-                  fontFamily: "var(--font-barlow-condensed), sans-serif",
-                  fontSize: "1.414rem",
-                  fontWeight: 700,
-                  lineHeight: 1.2,
-                }}
-              >
-                OBRA-PRIMA
-              </span>
-              <span
-                style={{ ...bodyFont, fontSize: "1.25rem", color: "rgba(255,255,255,0.50)" }}
-              >
-                Construimos lo que imaginás.
-              </span>
+              <a href="#" aria-label="OBRA-PRIMA — inicio">
+                <Image
+                  src="/images/obra-prima-logo.webp"
+                  alt="OBRA-PRIMA logo"
+                  width={130}
+                  height={94}
+                  className="h-14 w-auto object-contain"
+                />
+              </a>
             </div>
             <p
               className="leading-relaxed max-w-[220px]"

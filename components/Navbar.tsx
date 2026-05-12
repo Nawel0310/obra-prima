@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 const WA_URL = `https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "5491100000000"}?text=Hola%2C%20quiero%20consultar%20por%20un%20presupuesto%20con%20OBRA-PRIMA`;
 
@@ -30,28 +31,15 @@ export default function Navbar() {
           className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-20"
           aria-label="Navegación principal"
         >
-          <a href="#" className="flex flex-col leading-none">
-            <span
-              className="text-accent block"
-              style={{
-                fontFamily: "var(--font-barlow-condensed), sans-serif",
-                fontSize: "1.414rem",
-                fontWeight: 700,
-                lineHeight: 1.2,
-              }}
-            >
-              OBRA-PRIMA
-            </span>
-            <span
-              className="text-foreground-muted"
-              style={{
-                fontFamily: "var(--font-barlow), system-ui, sans-serif",
-                fontSize: "1.25rem",
-                letterSpacing: "0.06em",
-              }}
-            >
-              Construimos lo que imaginás.
-            </span>
+          <a href="#" aria-label="OBRA-PRIMA — inicio">
+            <Image
+              src="/images/obra-prima-logo.webp"
+              alt="OBRA-PRIMA logo"
+              width={110}
+              height={79}
+              className="h-12 w-auto object-contain"
+              priority
+            />
           </a>
 
           <div className="hidden lg:flex items-center gap-8">

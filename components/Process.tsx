@@ -102,16 +102,13 @@ export default function Process() {
 
                 <div
                   className="mt-2 mb-6 w-[52px] h-[52px] rounded-full flex items-center justify-center"
-                  style={{
-                    backgroundColor: "rgba(255,255,255,0.12)",
-                    border: "1px solid rgba(14,165,233,0.5)",
-                  }}
+                  style={{ backgroundColor: "var(--color-accent)" }}
                 >
                   <Icon
                     size={22}
-                    className="text-accent"
                     strokeWidth={1.5}
                     aria-hidden="true"
+                    style={{ color: "var(--color-primary)" }}
                   />
                 </div>
 
